@@ -1,0 +1,76 @@
+/* 季节主题色彩变量 */
+:root {
+    --spring-primary: #ffb7c5;
+    --spring-secondary: #98d982;
+    --summer-primary: #4ade80;
+    --summer-secondary: #fbbf24;
+    --autumn-primary: #f97316;
+    --autumn-secondary: #dc2626;
+    --winter-primary: #e0f2fe;
+    --winter-secondary: #94a3b8;
+}
+
+/* 呼吸动画 */
+@keyframes breathe {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.02); }
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 脉冲光晕 */
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.1); }
+    50% { box-shadow: 0 0 40px rgba(255,255,255,0.3); }
+}
+
+/* 漂浮动画 */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(2deg); }
+    75% { transform: translateY(5px) rotate(-2deg); }
+}
+
+/* 闪烁动画 */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* UI元素动画 */
+.season-info {
+    animation: fadeIn 1s ease-out;
+}
+
+.control-panel {
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.hint-text {
+    animation: breathe 4s ease-in-out infinite;
+}
+
+.glow-btn {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* 季节过渡 */
+.season-transition {
+    transition: background 2s ease-in-out;
+}
+
+/* 音量条动画 */
+.volume-bar {
+    background-size: 200% 100%;
+    animation: gradient-shift 2s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
